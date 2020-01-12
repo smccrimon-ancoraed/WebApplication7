@@ -14,5 +14,7 @@ namespace WebApplication7.Data
         {
         }
         public DbSet<Film> Film { get; set; }
+        public DbSet<WebApplication7.Models.Actor> Actor { get; set; }
+        public DbSet<Address> Address { get; set; }
     }
 }

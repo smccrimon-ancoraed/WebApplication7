@@ -8,7 +8,7 @@ namespace WebApplication7.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            return;
+          
             migrationBuilder.CreateTable(
                 name: "Film",
                 columns: table => new
@@ -37,7 +37,7 @@ namespace WebApplication7.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
 
-            return;
+            
 
             migrationBuilder.DropTable(
                 name: "Film");

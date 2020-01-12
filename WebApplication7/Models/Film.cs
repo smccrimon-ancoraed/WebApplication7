@@ -27,11 +27,13 @@ namespace WebApplication7.Models
 
         public short? Length { get; set; }
         [Required]
+        
         public decimal Replacement_cost { get; set; } // [decimal](5, 2)
 
         public string Rating { get; set; } // [varchar] (10)
         public string Special_features { get; set; }
         [Required]
+
         public DateTime Last_update { get; set; }
 
         /****** Object:  Table [dbo].[film]   

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication7.Data;
 
 namespace WebApplication7.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200108153732_Fieldupdates")]
+    partial class Fieldupdates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -182,53 +184,6 @@ namespace WebApplication7.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("WebApplication7.Models.Actor", b =>
-                {
-                    b.Property<int>("Actor_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("First_name")
-                        .IsRequired();
-
-                    b.Property<string>("Last_name")
-                        .IsRequired();
-
-                    b.Property<DateTime>("Last_update");
-
-                    b.HasKey("Actor_Id");
-
-                    b.ToTable("Actor");
-                });
-
-            modelBuilder.Entity("WebApplication7.Models.Address", b =>
-                {
-                    b.Property<int>("Address_id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Address1")
-                        .IsRequired();
-
-                    b.Property<string>("Address2");
-
-                    b.Property<int>("City_id");
-
-                    b.Property<string>("District")
-                        .IsRequired();
-
-                    b.Property<DateTime>("Last_update");
-
-                    b.Property<string>("Phone")
-                        .IsRequired();
-
-                    b.Property<string>("Postal_code");
-
-                    b.HasKey("Address_id");
-
-                    b.ToTable("Address");
                 });
 
             modelBuilder.Entity("WebApplication7.Models.Film", b =>

@@ -35,7 +35,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-link">@Html.ActionLink("Customer Data","Index","Films")
+                        <li class="nav-item">
+                            @Html.ActionLink("Address Data", "Index", "Addresses", null, new { @class = "nav-link text-dark" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Customer Data", "Index", "Films", null, new { @class = "nav-link text-dark" })
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Actors" asp-action="Index">Actor Menu</a>
                         </li>
                     </ul>
                 </div>
